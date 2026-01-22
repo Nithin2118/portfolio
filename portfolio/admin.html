@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Portfolio Manager</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-brand">
+            <span class="brand-icon">🔐</span>
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="header-actions">
+            <a href="index.html" target="_blank" class="header-btn preview-btn">
+                <span>👁️</span> Preview Portfolio
+            </a>
+            <button class="header-btn logout-btn" id="logout-btn">
+                <span>🚪</span> Logout
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="about">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-text">About</span>
+                </button>
+                <button class="nav-item" data-section="experience">
+                    <span class="nav-icon">💼</span>
+                    <span class="nav-text">Experience</span>
+                </button>
+                <button class="nav-item" data-section="skills">
+                    <span class="nav-icon">🛠️</span>
+                    <span class="nav-text">Skills</span>
+                </button>
+                <button class="nav-item" data-section="projects">
+                    <span class="nav-icon">🚀</span>
+                    <span class="nav-text">Projects</span>
+                </button>
+                <button class="nav-item" data-section="contact">
+                    <span class="nav-icon">📧</span>
+                    <span class="nav-text">Contact</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="save-all-btn" id="save-all-btn">
+                    <span>💾</span> Save All Changes
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- About Section -->
+            <section class="admin-section active" id="section-about">
+                <div class="section-header">
+                    <h2>About / Profile</h2>
+                    <p class="section-desc">Edit your profile information and bio</p>
+                </div>
+                <div class="form-card">
+                    <div class="form-group">
+                        <label for="profile-name">Full Name</label>
+                        <input type="text" id="profile-name" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-title">Job Title</label>
+                        <input type="text" id="profile-title" placeholder="e.g., AI/ML Engineer">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-bio">Bio / Objective</label>
+                        <textarea id="profile-bio" rows="4"
+                            placeholder="Write a short bio about yourself..."></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profile-city">City</label>
+                            <input type="text" id="profile-city" placeholder="City">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-state">State</label>
+                            <input type="text" id="profile-state" placeholder="State">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-country">Country</label>
+                            <input type="text" id="profile-country" placeholder="Country">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="admin-section" id="section-experience">
+                <div class="section-header">
+                    <h2>Work Experience</h2>
+                    <p class="section-desc">Manage your work experience entries</p>
+                </div>
+                <button class="add-btn" id="add-experience-btn">
+                    <span>+</span> Add Experience
+                </button>
+                <div class="items-list" id="experience-list">
+                    <!-- Experience items will be populated by JS -->
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="admin-section" id="section-skills">
+                <div class="section-header">
+                    <h2>Skills</h2>
+                    <p class="section-desc">Manage your skill categories and levels</p>
+                </div>
+                <div class="skills-categories" id="skills-categories">
+                    <!-- Skills will be populated by JS -->
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="admin-section" id="section-projects">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <p class="section-desc">Add, edit, or remove your portfolio projects</p>
+                </div>
+                <button class="add-btn" id="add-project-btn">
+                    <span>+</span> Add New Project
+                </button>
+                <div class="items-list" id="projects-list">
+                    <!-- Projects will be populated by JS -->
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="admin-section" id="section-contact">
+                <div class="section-header">
+                    <h2>Contact Information</h2>
+                    <p class="section-desc">Update your contact details</p>
+                </div>
+                <div class="form-card">
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">Phone</label>
+                        <input type="tel" id="contact-phone" placeholder="+91 XXXXXXXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-linkedin">LinkedIn URL</label>
+                        <input type="url" id="contact-linkedin" placeholder="https://linkedin.com/in/...">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-location">Location</label>
+                        <input type="text" id="contact-location" placeholder="City, State">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Adding/Editing Items -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="item-modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Add Item</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Dynamic form content -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
+                <button class="btn btn-primary" id="modal-save">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,677 @@
+/* ============================================
+   Admin Dashboard Styles
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --admin-bg: #0a0a0f;
+    --admin-bg-secondary: #0f0f1a;
+    --admin-bg-tertiary: #141428;
+    --admin-accent: #00f5ff;
+    --admin-accent-dim: #00b8c4;
+    --admin-purple: #8b5cf6;
+    --admin-green: #10b981;
+    --admin-red: #ef4444;
+    --admin-text: #e4e4e7;
+    --admin-text-muted: #71717a;
+    --admin-border: rgba(0, 245, 255, 0.2);
+    --admin-glow: 0 0 20px rgba(0, 245, 255, 0.3);
+    --admin-radius: 8px;
+    --admin-transition: 0.3s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Header
+   ============================================ */
+.admin-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: var(--admin-bg-secondary);
+    border-bottom: 1px solid var(--admin-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 100;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-icon {
+    font-size: 1.5rem;
+}
+
+.header-brand h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--admin-accent), var(--admin-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--admin-radius);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    text-decoration: none;
+}
+
+.preview-btn {
+    background: rgba(0, 245, 255, 0.1);
+    border: 1px solid var(--admin-border);
+    color: var(--admin-accent);
+}
+
+.preview-btn:hover {
+    background: rgba(0, 245, 255, 0.2);
+    box-shadow: var(--admin-glow);
+}
+
+.logout-btn {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--admin-red);
+}
+
+.logout-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.admin-layout {
+    display: flex;
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+}
+
+/* ============================================
+   Sidebar
+   ============================================ */
+.admin-sidebar {
+    width: 220px;
+    background: var(--admin-bg-secondary);
+    border-right: 1px solid var(--admin-border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 1rem 0;
+}
+
+.nav-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    background: transparent;
+    border: none;
+    color: var(--admin-text-muted);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    text-align: left;
+}
+
+.nav-item:hover {
+    background: rgba(0, 245, 255, 0.05);
+    color: var(--admin-text);
+}
+
+.nav-item.active {
+    background: rgba(0, 245, 255, 0.1);
+    color: var(--admin-accent);
+    border-left: 3px solid var(--admin-accent);
+}
+
+.nav-icon {
+    font-size: 1.1rem;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid var(--admin-border);
+}
+
+.save-all-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, var(--admin-accent), var(--admin-purple));
+    border: none;
+    border-radius: var(--admin-radius);
+    color: var(--admin-bg);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--admin-transition);
+}
+
+.save-all-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--admin-glow);
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+.admin-main {
+    flex: 1;
+    margin-left: 220px;
+    padding: 2rem;
+    max-width: 900px;
+}
+
+.admin-section {
+    display: none;
+}
+
+.admin-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--admin-text);
+    margin-bottom: 0.25rem;
+}
+
+.section-desc {
+    color: var(--admin-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Forms
+   ============================================ */
+.form-card {
+    background: var(--admin-bg-secondary);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--admin-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    color: var(--admin-text);
+    font-size: 0.95rem;
+    transition: var(--admin-transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--admin-text-muted);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(0, 245, 255, 0.1);
+    border: 1px dashed var(--admin-accent);
+    border-radius: var(--admin-radius);
+    color: var(--admin-accent);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    margin-bottom: 1.5rem;
+}
+
+.add-btn:hover {
+    background: rgba(0, 245, 255, 0.2);
+}
+
+.add-btn span {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--admin-radius);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--admin-accent), var(--admin-purple));
+    color: var(--admin-bg);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--admin-glow);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text-muted);
+}
+
+.btn-secondary:hover {
+    border-color: var(--admin-text-muted);
+    color: var(--admin-text);
+}
+
+/* ============================================
+   Items List (Projects, Experience)
+   ============================================ */
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-card {
+    background: var(--admin-bg-secondary);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: var(--admin-transition);
+}
+
+.item-card:hover {
+    border-color: var(--admin-accent);
+}
+
+.item-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 245, 255, 0.1);
+    border-radius: var(--admin-radius);
+}
+
+.item-content {
+    flex: 1;
+}
+
+.item-title {
+    font-weight: 600;
+    color: var(--admin-text);
+    margin-bottom: 0.25rem;
+}
+
+.item-subtitle {
+    font-size: 0.85rem;
+    color: var(--admin-text-muted);
+}
+
+.item-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.item-btn {
+    padding: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    color: var(--admin-text-muted);
+    cursor: pointer;
+    transition: var(--admin-transition);
+    font-size: 1rem;
+}
+
+.item-btn:hover {
+    border-color: var(--admin-accent);
+    color: var(--admin-accent);
+}
+
+.item-btn.delete:hover {
+    border-color: var(--admin-red);
+    color: var(--admin-red);
+}
+
+/* ============================================
+   Skills Section
+   ============================================ */
+.skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-category-card {
+    background: var(--admin-bg-secondary);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    overflow: hidden;
+}
+
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--admin-bg-tertiary);
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.skill-category-header h4 {
+    flex: 1;
+    font-weight: 600;
+}
+
+.skill-items-list {
+    padding: 1rem 1.25rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-item:last-child {
+    border-bottom: none;
+}
+
+.skill-item input {
+    flex: 1;
+    padding: 0.5rem;
+    background: var(--admin-bg);
+    border: 1px solid var(--admin-border);
+    border-radius: 4px;
+    color: var(--admin-text);
+    font-size: 0.9rem;
+}
+
+.skill-item input:focus {
+    outline: none;
+    border-color: var(--admin-accent);
+}
+
+.skill-level {
+    width: 80px;
+}
+
+/* ============================================
+   Modal
+   ============================================ */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--admin-transition);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: var(--admin-bg-secondary);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(-20px);
+    transition: var(--admin-transition);
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.modal-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--admin-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--admin-transition);
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--admin-accent);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--admin-border);
+}
+
+/* ============================================
+   Toast
+   ============================================ */
+#toast-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.toast {
+    padding: 0.875rem 1.25rem;
+    background: var(--admin-bg-secondary);
+    border: 1px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    color: var(--admin-text);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.toast.success {
+    border-color: var(--admin-green);
+}
+
+.toast.error {
+    border-color: var(--admin-red);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 60px;
+    }
+
+    .nav-text,
+    .sidebar-footer span:last-child {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .nav-item.active {
+        border-left: none;
+        border-bottom: 3px solid var(--admin-accent);
+    }
+
+    .admin-main {
+        margin-left: 60px;
+        padding: 1rem;
+    }
+
+    .save-all-btn span:last-child {
+        display: none;
+    }
+
+    .header-btn span:last-child {
+        display: none;
+    }
+}

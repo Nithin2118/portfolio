@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithin Datta Guttula | AI/ML Engineer</title>
+    <!-- Using Aptos Narrow (Windows system font) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Three.js Neural Network Background -->
+    <canvas id="neural-bg"></canvas>
+
+    <!-- Scanline overlay effect -->
+    <div class="scanlines"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="profile-photo-container" id="admin-trigger" title="Click to login as admin">
+                <div class="photo-glow"></div>
+                <img src="profile.jpg" alt="Nithin Datta Guttula" class="profile-photo">
+                <div class="photo-border"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-name-container">
+                    <h1 class="hero-title">
+                        <span class="name-typing-text"></span>
+                        <span class="name-cursor">|</span>
+                    </h1>
+                </div>
+                <div class="hero-subtitle-container">
+                    <span class="hero-line"></span>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <span class="hero-line"></span>
+                </div>
+                <p class="hero-description">
+                    Transforming complex data into intelligent solutions through
+                    <span class="highlight">Machine Learning</span> &
+                    <span class="highlight">Artificial Intelligence</span>
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">View Projects</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span class="btn-text">Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="8.09">0</span>
+                        <span class="stat-label">CGPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="1.5">0</span>
+                        <span class="stat-label">Years+ Exp</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">nithin@ai-engineer:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line">
+                                <span class="prompt">$</span> cat objective.txt
+                            </p>
+                            <p class="terminal-output">
+                                Highly motivated and analytical <span class="code-highlight">AI/ML Engineer</span>
+                                seeking to apply my strong background in Machine Learning algorithm development,
+                                predictive modeling, and AI principles to solve complex business problems and create
+                                impactful solutions in a dynamic organization.
+                            </p>
+                            <p class="terminal-line">
+                                <span class="prompt">$</span> cat location.json
+                            </p>
+                            <p class="terminal-output code-block">
+                                {<br>
+                                &nbsp;&nbsp;"city": "Rajahmundry",<br>
+                                &nbsp;&nbsp;"state": "Andhra Pradesh",<br>
+                                &nbsp;&nbsp;"country": "India"<br>
+                                }
+                            </p>
+                            <p class="terminal-line">
+                                <span class="prompt">$</span> <span class="cursor-blink">_</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <h3 class="subsection-title">
+                        <span class="icon">🎓</span> Education
+                    </h3>
+                    <div class="education-timeline">
+                        <div class="education-item">
+                            <div class="edu-year">2020-2024</div>
+                            <div class="edu-content">
+                                <h4>B.Tech in Computer Science</h4>
+                                <p class="edu-institution">Vel Tech University, Chennai</p>
+                                <div class="edu-grade">
+                                    <span class="grade-label">CGPA:</span>
+                                    <span class="grade-value">8.09</span>
+                                    <div class="grade-bar">
+                                        <div class="grade-fill" style="--grade: 80.9%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-year">2018-2020</div>
+                            <div class="edu-content">
+                                <h4>Intermediate (MPC)</h4>
+                                <p class="edu-institution">Narayana Junior College, Rajahmundry</p>
+                                <div class="edu-grade">
+                                    <span class="grade-label">CGPA:</span>
+                                    <span class="grade-value">8.15</span>
+                                    <div class="grade-bar">
+                                        <div class="grade-fill" style="--grade: 81.5%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="edu-year">2017-2018</div>
+                            <div class="edu-content">
+                                <h4>Secondary Education</h4>
+                                <p class="edu-institution">Sri Chaitanya Techno School, Rajahmundry</p>
+                                <div class="edu-grade">
+                                    <span class="grade-label">CGPA:</span>
+                                    <span class="grade-value">9.8</span>
+                                    <div class="grade-bar">
+                                        <div class="grade-fill" style="--grade: 98%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/about&gt;</span>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">💻</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="SQL">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🤖</span>
+                        <h3>AI / ML</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">ML Models</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pandas & NumPy</span>
+                                <span class="skill-level">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Gen AI & LLMs</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">NLP</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">REST APIs</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🛠️</span>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">OpenAI APIs</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">LLM (Mistral)</span>
+                                <span class="skill-level">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Postman</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">⚡</span>
+                        <h3>Other</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PDF Parsing</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Cleaning</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Time Series</span>
+                                <span class="skill-level">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Weather APIs</span>
+                                <span class="skill-level">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="--progress: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/skills&gt;</span>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+                <div class="experience-card" data-aos="fade-up">
+                    <div class="exp-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core"></div>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3 class="exp-title">AI/ML Engineer</h3>
+                                <span class="exp-company">@ Rugged Monitoring</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">
+                                    <span class="date-icon">📅</span>
+                                    Sep 2024 - Present
+                                </span>
+                                <span class="exp-location">
+                                    <span class="location-icon">📍</span>
+                                    Hyderabad, Telangana
+                                </span>
+                            </div>
+                        </div>
+                        <div class="exp-projects">
+                            <div class="exp-project">
+                                <h4 class="project-title">
+                                    <span class="project-icon">⚡</span>
+                                    Motor Asset Health Index Predictive Modeling
+                                </h4>
+                                <p class="project-desc">Developed a predictive analytics solution to assess the health
+                                    of electric motors using <span class="tech-tag">LightGBM</span>. Created <span
+                                        class="tech-tag">REST APIs</span> to serve the best-performing model, enabling
+                                    real-time health index scoring.</p>
+                            </div>
+                            <div class="exp-project">
+                                <h4 class="project-title">
+                                    <span class="project-icon">🔄</span>
+                                    Transformer Turns Ratio Test Automation
+                                </h4>
+                                <p class="project-desc">Automated extraction of transformer test data from unstructured
+                                    PDFs using <span class="tech-tag">OCR-based LLMs</span> like <span
+                                        class="tech-tag">Mistral</span> and <span class="tech-tag">OpenAI APIs</span>.
+                                    Streamlined testing workflows.</p>
+                            </div>
+                            <div class="exp-project">
+                                <h4 class="project-title">
+                                    <span class="project-icon">🌤️</span>
+                                    Asset Simulator with Weather-Based Predictions
+                                </h4>
+                                <p class="project-desc">Built an asset simulator tool integrating <span
+                                        class="tech-tag">OpenWeather API</span> to predict ambient temperature. Used
+                                    this data to simulate asset behavior under varying environmental conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card" data-aos="fade-up">
+                    <div class="exp-node">
+                        <div class="node-ring"></div>
+                        <div class="node-core"></div>
+                    </div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3 class="exp-title">Internship</h3>
+                                <span class="exp-company">@ Rugged Monitoring</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-date">
+                                    <span class="date-icon">📅</span>
+                                    July 2024 - Sep 2024
+                                </span>
+                                <span class="exp-location">
+                                    <span class="location-icon">📍</span>
+                                    Hyderabad, Telangana
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="exp-highlights">
+                            <li>
+                                <span class="highlight-bullet"></span>
+                                Gained hands-on experience with <span class="tech-tag">Python</span> programming,
+                                focusing on data manipulation using <span class="tech-tag">pandas</span>, <span
+                                    class="tech-tag">numpy</span>, and <span class="tech-tag">matplotlib</span>
+                            </li>
+                            <li>
+                                <span class="highlight-bullet"></span>
+                                Built RESTful APIs using <span class="tech-tag">FastAPI</span> / <span
+                                    class="tech-tag">Flask</span> to serve machine learning models
+                            </li>
+                            <li>
+                                <span class="highlight-bullet"></span>
+                                Developed and evaluated various ML models (regression, classification, ensemble methods)
+                                on real-world datasets
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/experience&gt;</span>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon-large">🦴</div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-name">Bone Cancer Detection</h3>
+                        </div>
+                        <p class="project-description">
+                            Developed a deep learning model to detect bone cancer from medical imaging data using
+                            <strong>Convolutional Neural Networks (CNNs)</strong> with high accuracy. Implemented data
+                            augmentation techniques.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">Medical Imaging</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon-large">🔊</div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-name">Noise Reduction using GAN</h3>
+                        </div>
+                        <p class="project-description">
+                            Designed a <strong>Generative Adversarial Network (GAN)</strong> to reduce noise in audio
+                            and image data. Achieved substantial noise reduction with minimal distortion by training on
+                            clean-noisy data pairs.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">GAN</span>
+                            <span class="tag">Signal Processing</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon-large">⚙️</div>
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-name">Motor Health Predictor</h3>
+                        </div>
+                        <p class="project-description">
+                            Built a predictive analytics solution for electric motor health assessment using
+                            <strong>LightGBM</strong>. Created production-ready REST APIs for real-time health index
+                            scoring.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">LightGBM</span>
+                            <span class="tag">REST API</span>
+                            <span class="tag">Predictive Analytics</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/projects&gt;</span>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                        I'll try my best to get back to you!
+                    </p>
+                    <div class="contact-cards">
+                        <a href="mailto:nithindattaguttula@gmail.com" class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">nithindattaguttula@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917981799926" class="contact-card">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 7981799926</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nithin-datta-g-ba9831287/" target="_blank"
+                            class="contact-card">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">nithin-datta-g</span>
+                            </div>
+                        </a>
+                        <div class="contact-card">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Rajahmundry, Andhra Pradesh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <a href="mailto:nithindattaguttula@gmail.com" class="btn btn-primary btn-large">
+                        <span class="btn-text">Hire Me</span>
+                        <span class="btn-icon">🚀</span>
+                    </a>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/contact&gt;</span>
+        </section>
+    </main>
+
+    <!-- Admin Login Modal -->
+    <div class="admin-login-overlay" id="login-overlay">
+        <div class="admin-login-modal">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">🔐</div>
+                <h2>Admin Access</h2>
+                <p>Enter credentials to edit portfolio</p>
+            </div>
+            <form class="login-form" id="login-form">
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" placeholder="Enter username" autocomplete="off">
+                    <span class="input-glow"></span>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" placeholder="Enter password">
+                    <span class="input-glow"></span>
+                </div>
+                <div class="login-error" id="login-error"></div>
+                <button type="submit" class="btn btn-primary login-btn">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-icon">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Toolbar (shown when logged in) -->
+    <div class="admin-toolbar" id="admin-toolbar">
+        <div class="admin-toolbar-content">
+            <div class="admin-status">
+                <span class="admin-indicator"></span>
+                <span>Admin Mode</span>
+            </div>
+            <div class="admin-actions">
+                <button class="admin-btn" id="save-changes" title="Save Changes">
+                    <span>💾</span> Save
+                </button>
+                <button class="admin-btn" id="discard-changes" title="Discard Changes">
+                    <span>↩️</span> Discard
+                </button>
+                <button class="admin-btn admin-btn-logout" id="admin-logout" title="Logout">
+                    <span>🚪</span> Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">[NDG]</span>
+                <p>Designed & Built with 💙 by Nithin Datta Guttula</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/nithin-datta-g-ba9831287/" target="_blank" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="mailto:nithindattaguttula@gmail.com" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Nithin Datta Guttula. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
